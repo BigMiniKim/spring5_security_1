@@ -10,6 +10,7 @@
 
 <intercept-url pattern="/security/all" access="permitAll" /> <!-- 모두에게 권한 -->
 <intercept-url pattern="/security/member" access="hasRole('ROLE_MEMBER')" /><!--권한을 가진 사람만 -->
+<intercept-url pattern="/security/admin" access="hasRole('ROLE_ADMIN')" />
 	<form-login/>
 
 
@@ -19,7 +20,8 @@
  <authentication-provider> 
        <user-service> 
          <user name="member" password="{noop}member" authorities="ROLE_MEMBER" /> 
-         <user name="mananger" password="{noop}mananger" authorities="ROLE_MEMBER" /> 
+         <user name="manager" password="{noop}manager" authorities="ROLE_MEMBER" /> 
+         <user name="admin" password="{noop}admin" authorities="ROLE_MEMBER,ROLE_ADMIN" /> 
        </user-service> 
      </authentication-provider>
 

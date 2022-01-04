@@ -8,4 +8,5 @@
 </head>
 <body>
 <h1>/security/member page</h1>
+member페이지
 </body>
