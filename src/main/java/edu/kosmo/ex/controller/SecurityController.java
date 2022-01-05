@@ -1,7 +1,5 @@
 package edu.kosmo.ex.controller;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
-
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -50,14 +48,6 @@ public class SecurityController {
 
 			log.info("/admin....");
 			// return"security/admin"
-		}
-		
-		
-		@GetMapping("/accessError")
-		public void accessError(Model model) {
-
-			log.info("/accessError90...");
-			model.addAttribute("msg", "ACCESS Denied(403 에러)");
 		}
 
 	
