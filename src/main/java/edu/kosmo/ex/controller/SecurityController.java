@@ -49,7 +49,14 @@ public class SecurityController {
 			log.info("/admin....");
 			// return"security/admin"
 		}
-
+		@GetMapping("/accessError")
+		public void accessError(Model model) {
+		
+			log.info("/accessError()..");
+			
+			model.addAttribute("msg","ACCESS Denied(403 에러)");	
+			
+		}
 	
 }
 
