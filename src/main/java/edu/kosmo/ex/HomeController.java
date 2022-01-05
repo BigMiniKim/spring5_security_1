@@ -12,11 +12,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import edu.kosmo.ex.controller.SecurityController;
 import lombok.extern.log4j.Log4j;
 
-/**
- * Handles requests for the application home page.
- */
+
 @Log4j
 @Controller
 public class HomeController {
@@ -39,6 +38,7 @@ public class HomeController {
 		
 		return "home";
 	}
+	
 	@GetMapping("/login/loginForm")
 	public String loginForm() {
 		log.info("Welcome Login Form");
