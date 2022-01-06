@@ -39,6 +39,20 @@ public class HomeController {
 		return "home";
 	}
 	
+	@GetMapping("/user/userHome")
+	public void userHome() {
+		log.info("userHome...");
+		
+	}
+	
+	@GetMapping("/admin/adminHome")
+	public void adminHome() {
+		log.info("adminHome...");
+		
+	}
+	
+	
+	
 	@GetMapping("/login/loginForm")
 	public String loginForm() {
 		log.info("Welcome Login Form");
