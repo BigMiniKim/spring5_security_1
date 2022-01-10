@@ -20,10 +20,21 @@ public class EmpService {
    @Inject
    private EmpMapper empMapper;
    
-   public EmpVO getUser(String empNo){
-      log.info("readUser .. ");
-      return empMapper.readUser(empNo);
-   }
-   
-
+	/*
+	 * public EmpVO getUser(String empNo){ log.info("readUser .. "); return
+	 * empMapper.readUser(empNo); }
+	 */
+   public EmpVO getUser(String ename){
+	      log.info("readUser .. ");
+	     
+			/*
+			 * Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+			 * user_id = auth.getName(); System.out.println("유저 아이디:" + user_id );
+			 */
+	        
+	      EmpVO empVO = empMapper.readUser(ename);
+	      empVO.setAuthList(empMapper.readAuthority(ename));
+	      
+	      return empVO;
+	   }
 }
